@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.banner{
+    background-image: url('src/img/lights.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+
+.banner p{
+    font-style: italic;
+    font-weight: normal;
+}
+
+.banner h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.wrapper{
+    width: 350px;
+    margin: auto;
+    background-color: red;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    margin: 30px 0px 0px 0px;
+}
+
+#About h1{
+    font-size: 30px;
+    margin: 10px;
+}
+
+#About img{
+    width: 200px;
+    background-color:rgba(34, 34, 34, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+#About p{
+    font-style: italic;
+}
+@media only screen and (min-width: 768px){
+    nav{
+        border-radius: 0;
+        background: none;
+        width: 100%;
+        margin: 0;
+        height: 70px;
+    }
+
+    .banner p{
+        font-size: 25px;
+    }
+    
+    .banner h1{
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    .wrapper{
+        width: 600px;
+        margin: auto;
+        background-color: red;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .wrapper{
+        width: 1000px;
+    }
+}
