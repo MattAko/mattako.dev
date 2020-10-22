@@ -10,9 +10,48 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
+.mobileNav{
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+}
+
+.show-dropdown{
+    display:block;
+    background: #222222;
+    color: white;
+    background: #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: solid white 1px;
+}
+
+#dropdown li{
+    list-style: none;
+    padding: 20px;
+}
+
+.hide-dropdown{
+    display: none;
+}
+
+
+.hamburger ul{
+    background-color: #222222;
+    padding: 10px;
+    list-style: none;
+}
+
+.hamburger li{
+    background-color: white;
+    height: 2px;
+    margin: 5px;
+    width: 20px;
+}
+
 .banner{
     background-image: url('src/img/lights.jpg');
-    background-position: center center;
     background-size: cover;
     height: 100vh;  
     display: flex;
@@ -23,6 +62,13 @@ body{
     letter-spacing: 0.5px;
 }
 
+.arrow{
+    bottom: 0px;
+    width: 100%;
+    background-color: #222222;
+    position: absolute;
+    height: 50px;
+}
 
 .banner p{
     font-style: italic;
@@ -33,47 +79,77 @@ body{
     font-size: 30px;
     text-transform: uppercase;
     font-weight: bold;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
 }
 
 .wrapper{
-    width: 350px;
+    width: 325px;
     margin: auto;
-    background-color: red;
-    height: 1000px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 section{
     margin: 30px 0px 0px 0px;
 }
 
-#About h1{
-    font-size: 30px;
-    margin: 10px;
+section h1{
+    font-size: 40px;
+    margin: 50px 0 10px 0;
 }
 
-#About img{
+#about{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about img{
     width: 200px;
     background-color:rgba(34, 34, 34, 0.5);
     padding: 10px;
     border-radius: 50%;
     margin: 10px;
+    
 }
 
-#About p{
-    font-style: italic;
+#about p{
+    padding: 0 0 10px 0;
+    text-align: center;
 }
+
+#abilities{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#abilities h2{
+    align-self: flex-start;
+}
+
+.line{
+    background-color: gray;
+    height: 1px;
+    width: 100%;
+    margin: 20px 0 20px 0;
+}
+
+#abilities ul{
+    list-style:none;
+    align-self: flex-start;
+    padding: 10px 0 0 0;
+}
+
+#abilities li{
+    padding: 8px 0 0 0;
+}
+
+.line-text{
+    display: flex;
+    justify-content: space-between;
+}
+
 @media only screen and (min-width: 768px){
-    nav{
-        border-radius: 0;
-        background: none;
-        width: 100%;
-        margin: 0;
-        height: 70px;
-    }
-
     .banner p{
         font-size: 25px;
     }
@@ -87,7 +163,6 @@ section{
     .wrapper{
         width: 600px;
         margin: auto;
-        background-color: red;
     }
 }
 
