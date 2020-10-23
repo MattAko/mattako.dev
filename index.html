@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="src/img/icon.svg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/6b5fd5d08a.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -19,18 +20,23 @@
         
     </div>
     <nav class="mobileNav">
-        <div onclick="toggleNav()" class="hamburger">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <div class="hamburger-menu">
+            <div onclick="toggleNav()" class="menu-wrapper">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
         </div>
         <ul class="hide-dropdown" id="dropdown">
             <li>About</li>
             <li>Skills</li>
             <li>Experience</li>
             <li>Contact</li>
+            <li>
+                <i class="fab fa-twitter"></i>
+            </li>
         </ul>
     </nav>
 
@@ -46,72 +52,158 @@
             <h2>Location:</h2>
             <p>Los Angeles, California, United States</p>
         </section>
+    </div>
 
+    <div class="background-color">
+    <div class="wrapper">
         <section id="abilities">
             <h1>Abilities</h1>
             <div class="line"></div>
             <h2>Skills</h2>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>jQuery</li>
-                <li>JSON</li>
-                <li>Django</li>
-                <li>React</li>
-                <li>Command Line Interface</li>
-                <li>C++</li>
-                <li>C#</li>
-                <li>C</li>
-                <li>SQL</li>
-                <li>Python</li>
-                <li>Git Version Control</li>
-                <li>Verilog/VHDL</li>
-                <li>Object Oriented Programming</li>
-                <li>Data Structures</li>
-                <li>Algorithms</li>
-                <li>Computer Architecture</li>
-            </ul>
+            <div class="side-by-side-list">          
+                <ul class="side-by-side-list-element">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>JSON</li>
+                    <li>Django</li>
+                    <li>React</li>
+                    <li>Command Line Interface</li>
+                    <li>C++</li>
+                    <li>C#</li>
+                </ul>
+                <ul class="side-by-side-list-element">
+                    <li>C</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                    <li>Git Version Control</li>
+                    <li>Verilog/VHDL</li>
+                    <li>Object Oriented Programming</li>
+                    <li>Data Structures</li>
+                    <li>Algorithms</li>
+                    <li>Computer Architecture</li>
+                </ul>  
+            </div>
+
             <div class="line"></div>
             <h2>Tools</h2>
-            <ul>
-                <li>GitHub</li>
-                <li>VSCode</li>
-                <li>Sublime Text</li>
-                <li>Android Studio</li>
-                <li>Unity</li>
-                <li>Unreal Engine</li>
-                <li>PyCharm</li>
-                <li>Windows</li>
-                <li>Linux</li>
-                <li>Adobe Photoshop</li>
-                <li>Sony Vegas Pro</li>
-                <li>Microsoft Office</li>
-            </ul>
+            <div class="side-by-side-list">
+                <ul class="side-by-side-list-element">
+                    <li>GitHub</li>
+                    <li>VSCode</li>
+                    <li>Vim</li>
+                    <li>Sublime Text</li>
+                    <li>Android Studio</li>
+                    <li>Unity</li>
+                    <li>Unreal Engine</li>
+                </ul>
+                <ul class="side-by-side-list-element">
+                    <li>PyCharm</li>
+                    <li>Windows</li>
+                    <li>Linux</li>
+                    <li>Adobe Photoshop</li>
+                    <li>Sony Vegas Pro</li>
+                    <li>Microsoft Office</li>
+                </ul>
+            </div>
         </section>
+    </div>
+    </div>
+    
 
+    <div class="wrapper">
         <section id="experience">
-            <h1>Experience</h1>
+            <h1 style="text-align: center;">Experience</h1>
             <div class="line"></div>
             <h2>Education</h2>
             <div class="card">
-                <h3>California State Polytechnic Univeristy, Pomona</h3>
                 <div class="line-text">
-                    <p>B.S Computer Engineer</p>
-                    <p style="font-style: italic;">2016-2020</p>
+                    <h3>California State Polytechnic Univeristy, Pomona</h3>
+                    <p>Sept 2016 - May 2020</p>
                 </div>
+                <div class="stats">
+                    <ul>
+                        <li>Major: B.S in Computer Engineering</li>
+                        <li>GPA: 3.7</li>
+                        <li>Awards: Magna Cum Laude</li>
+                    </ul>
+                </div>
+                <div class="description">
+                    During university, I learned a tremendous amount of things; ranging from object oriented programming to designing and programming microcontrollers to learning how transistors work. As a computer engineer I did not learn a lot about web development, but I still was given the prior programming knowledge to undertake the learning process. This is also where I began to learn more about my personal interests and also when I started working out.
+                </div>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    Pomona, CA
+                </div>
+            </div>
+            <div class="card">
+                <div class="line-text">
+                    <h3>Alhambra High School</h3>
+                    <p >Sept 2012 - May 2016</p>
+                </div>
+                <p class="description">
+                    Personally, I really enjoyed my high school experience. Fortunately, I learned how to use Adobe Photoshop during my time which has been tremendously helpful throughout the years. I also did cross country and track and field for the four years I was here.
+                </p>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i> Alhambra, CA
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <h2>Work and Clubs</h2>
+            <div class="card">
+                <div class="line-text">
+                    <h3>iD Tech Camps (Instructor)</h3>
+                    <p >Jun 2019 - Aug 2019</p>
+                </div>
+                <p class="description">
+                    Taught weekly programming and design courses to children ages 10-17 years old. Course topics would range from programming Arduinos, designing games in Unreal Engine, and creating games in VR using Unity.
+                </p>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i> Pasadena, CA
+                </div>
+            </div>
+            <div class="card">
+                <div class="line-text">
+                    <h3>Cal Poly Pomona Game Design and Development Club (Club Member)</h3>
+                    <p >Jan 2019 - Mar 2020</p>
+                </div>
+                <p class="description">
+                    Would attend weekly meetings to learn more about game design. While I was in the club, we worked on grouped projects on games every semester.
+                </p>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i> Pomona, CA
+                </div>
+            </div>
+            <div class="card">
+                <div class="line-text">
+                    <h3>pokeStuf (Shift Lead)</h3>
+                    <p >Jun 2019 - Aug 2019</p>
+                </div>
+                <p class="description">
+                    Became a shift lead who would manage other workers, prepare the restaurant both for openings and closings. Performed general tasks such as preparing ingredients/dishes, cashier duties, serving meals and more. 
+                </p>
                 
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i> Alhambra, CA
+                </div>
             </div>
             
+
             <div class="line"></div>
-            <h2>Work History</h2>
-            <div class="line"></div>
+
             <h2>Projects</h2>
         </section>
+    </div>
 
+    <div class="background-color">
+    <div class="wrapper">
         <section id="contact">
             <h1>Contact</h1>
         </section>
+    </div>
     </div>
     
     
