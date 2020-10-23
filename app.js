@@ -41,6 +41,9 @@ function toggleNav(){
         console.log("hiding dropdown");
         $('#dropdown').removeClass('show-dropdown');
         $('#dropdown').addClass('hide-dropdown');
-    }
-    
+    }   
 }
+
+function openURL(url) { 
+    window.open(url, "_blank"); 
+} 

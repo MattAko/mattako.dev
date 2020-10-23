@@ -53,7 +53,7 @@ body{
     color: #fa8072;
 }
 
-#dropdown a{
+a{
     color: white;
     text-decoration: none;
 }
@@ -212,6 +212,10 @@ section h1{
 
 .project-card{
     padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-img{
@@ -225,8 +229,24 @@ section h1{
     opacity: 0.5;
 }
 
+.project-img i:hover{
+    opacity: 1;
+}
+
 #spotify{
     background-image: url("./src/img/spotifyplaylistgen.png");
+}
+
+#pin-it{
+    background-image: url('./src/img/pin-it.png');
+    background-position: center center;
+    background-size: contain;
+}
+
+#tldr{
+    background-image: url('./src/img/tldr.png');
+    background-position: center center;
+    background-size: contain;
 }
 
 .project-desc{
