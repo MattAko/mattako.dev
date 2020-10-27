@@ -1,7 +1,6 @@
 console.log("script running");
 
-// Parallax effect
-
+// Parallax effect for banner
 var parallax = document.getElementsByClassName('banner')[0];
 window.addEventListener("scroll", function(){
     var pageOffset = window.pageYOffset * 0.7;
@@ -9,41 +8,71 @@ window.addEventListener("scroll", function(){
 })
 
 
-// Mobile nav menu
-
-var mobileNav = document.getElementsByClassName('mobileNav')[0];
-var bannerHeight = document.getElementsByClassName('banner')[0].scrollHeight;
-
-$(document).scroll(function(){
-    var y = $(this).scrollTop();
-    bannerHeight = document.getElementsByClassName('banner')[0].scrollHeight;
-    if(y > bannerHeight-50){
-        $('.mobileNav').css('position', 'fixed');
-        $('.mobileNav').css('top', '0px');
-        $('.arrow').css('display','none');
-        $('section').css('margin', '30px 0 0 0');
-    }else{
-        $('.mobileNav').css('position', 'relative');
-        $('.arrow').css('display','block');
-        $('section').css('margin', '0 0 0 0');
-    }
-})
-
+// Show or hide the dropdown menu when pressed
+// This is only used for the mobile nav
 function toggleNav(){
-    console.log('toggle nav');
-    console.log($('#dropdown').hasClass('hide-dropdown'));
     if($('#dropdown').hasClass('hide-dropdown')){
         $('#dropdown').removeClass('hide-dropdown');
-        console.log("Showing dropdown");
         $('#dropdown').addClass('show-dropdown');
     }
     else{
-        console.log("hiding dropdown");
         $('#dropdown').removeClass('show-dropdown');
         $('#dropdown').addClass('hide-dropdown');
     }   
 }
 
+
+// For opening urls
 function openURL(url) { 
     window.open(url, "_blank"); 
 } 
+
+
+// Jump the window view to a specific section
+// sectionName is a string that represents the section id to jump to 
+function jumpto(sectionName){
+    //window.location.hash = sectionName;
+    document.getElementById(sectionName).scrollIntoView({behavior: 'smooth'});
+
+    $('#dropdown').removeClass('show-dropdown');
+    $('#dropdown').addClass('hide-dropdown');
+}
+
+
+// Change bg color of floating nav li based on scroll height
+// Probably a cleaner way to do this xxx
+$(document).scroll(function(){
+    var y = $(this).scrollTop();
+    
+    // Finding all the heights for each section
+    bannerHeight = document.getElementsByClassName('banner')[0].scrollHeight;
+    aboutHeight = document.getElementById('about-section').scrollHeight;
+    expHeight = document.getElementById('experience-section').scrollHeight;
+    skillsHeight = document.getElementById('abilities-section').scrollHeight;
+    contactHeight = document.getElementById('contact-section').scrollHeight;
+
+    console.log(contactHeight);
+    if(y > bannerHeight + aboutHeight + skillsHeight + expHeight - 2*contactHeight){
+        $('.floating-nav li:eq(3)').css('background-color', 'red');
+        $('.floating-nav li:eq(2)').css('background-color', '#222222');
+        $('.floating-nav li:eq(1)').css('background-color', '#222222');
+        $('.floating-nav li:eq(0)').css('background-color', '#222222');
+    }
+    else if(y > bannerHeight + aboutHeight + skillsHeight - 10){
+        $('.floating-nav li:eq(3)').css('background-color', '#222222');
+        $('.floating-nav li:eq(2)').css('background-color', 'red');
+        $('.floating-nav li:eq(1)').css('background-color', '#222222');
+        $('.floating-nav li:eq(0)').css('background-color', '#222222');
+    }
+    else if(y > bannerHeight + aboutHeight - 10){
+        $('.floating-nav li:eq(3)').css('background-color', '#222222');
+        $('.floating-nav li:eq(2)').css('background-color', '#222222');
+        $('.floating-nav li:eq(1)').css('background-color', 'red');
+        $('.floating-nav li:eq(0)').css('background-color', '#222222');
+    } else{
+        $('.floating-nav li:eq(3)').css('background-color', '#222222');
+        $('.floating-nav li:eq(2)').css('background-color', '#222222');
+        $('.floating-nav li:eq(1)').css('background-color', '#222222');
+        $('.floating-nav li:eq(0)').css('background-color', 'red');
+    } 
+})

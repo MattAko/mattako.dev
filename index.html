@@ -17,7 +17,7 @@
         <p>A Fullstack Developer</p>
     </div>
     <div class="arrow">
-        
+        <i onclick="jumpto('about-section')" class="fas fa-angle-double-down"></i>
     </div>
     <nav class="mobileNav">
         <div class="hamburger-menu">
@@ -30,10 +30,10 @@
             </div>
         </div>
         <ul class="hide-dropdown" id="dropdown">
-            <li>About</li>
-            <li>Skills</li>
-            <li>Experience</li>
-            <li>Contact</li>
+            <li onclick="jumpto('about-section')">About</li>
+            <li onclick="jumpto('abilities-section')">Skills</li>
+            <li onclick="jumpto('experience-section')">Experience</li>
+            <li onclick="jumpto('contact-section')">Contact</li>
             <li>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/matt.ako/">
                     <i id="socials" class="fab fa-instagram"></i>
@@ -47,31 +47,46 @@
                 <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/user/1253109382?si=AU4I_oz-Qr-wzn75E2iiIA">
                     <i id="socials" class="fab fa-spotify"></i>
                 </a>
-                
             </li>
         </ul>
     </nav>
 
-    <div class="wrapper">
+    <div class="floating-nav">
+        <ul>
+            <li onclick="jumpto('about-section')">About</li>
+            <li onclick="jumpto('abilities-section')">Skills</li>
+            <li onclick="jumpto('experience-section')">Experience</li>
+            <li onclick="jumpto('contact-section')">Contact</li>
+            </li>
+        </ul>
+    </div>
+
+    </div>
+
+    <div id="about-section" class="wrapper">
+        <h1 style="text-align: center; font-size: 40px;">About Me</h1>
+        <div class="line"></div>
         <section id="about">
-            <h1>About Me</h1>
             <p>I recently graduated from California State Polytechnic University, Pomona with a B.S in Computer Engineering. I am currently pursing a career as a software engineer, focusing on either fullstack devleopment or possibly machine learning.</p>
             <img src="src/img/Prof.png" alt="none">
-            <h2>Name:</h2>
-            <p>Matthew Pontawe Roberts</p>
-            <h2>Age:</h2>
-            <p>22 years old</p>
-            <h2>Location:</h2>
-            <p>Los Angeles, California, United States</p>
+            <div class="details">
+                <h2>Name:</h2>
+                <p>Matthew Pontawe Roberts</p>
+                <h2>Age:</h2>
+                <p>22 years old</p>
+                <h2>Location:</h2>
+                <p>Los Angeles, California, United States</p>
+            </div>
+            
         </section>
     </div>
 
     <div class="background-color">
-    <div class="wrapper">
+    <div id="abilities-section" class="wrapper">
         <section id="abilities">
-            <h1>Abilities</h1>
+            <h1>Skills</h1>
             <div class="line"></div>
-            <h2>Skills</h2>
+            <h2>Abilities</h2>
             <div class="side-by-side-list">          
                 <ul class="side-by-side-list-element">
                     <li>HTML5</li>
@@ -124,9 +139,9 @@
     </div>
     
 
-    <div class="wrapper">
+    <div id="experience-section" class="wrapper">
         <section id="experience">
-            <h1 style="text-align: center;">Experience</h1>
+            <h1>Experience</h1>
             <div class="line"></div>
             <h2>Education</h2>
             <div class="card">
@@ -236,9 +251,38 @@
     </div>
 
     <div class="background-color">
-    <div class="wrapper">
+    <div id="contact-section" class="wrapper">
         <section id="contact">
             <h1>Contact</h1>
+            <div class="line"></div>
+
+            <div id="contact-list">
+                <a href="">
+                    <i class="fas fa-at"></i>
+                    <p>mattako@protonmail.com</p>
+                    
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/mattako/">
+                    <i class="fab fa-linkedin-in"></i>
+                    <p>mattako</p>
+                    
+                </a>
+                <a target="_blank" href="https://www.instagram.com/matt.ako/">
+                    <i class="fab fa-instagram"></i>
+                    <p>matt.ako</p>
+                    
+                </a>
+                <a target="_blank" href="https://github.com/MattAko">
+                    <i class="fab fa-github"></i>
+                    <p>MattAko</p>
+                    
+                </a>
+                <a target="_blank" href="https://open.spotify.com/user/1253109382?si=AU4I_oz-Qr-wzn75E2iiIA">
+                    <i class="fab fa-spotify"></i>
+                    <p>Matthew Roberts</p>
+                    
+                </a>
+            </div>
         </section>
     </div>
     </div>
