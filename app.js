@@ -1,10 +1,15 @@
 console.log("script running");
 
+// global variables
+var desktopWidth = 1100;
+
 // Parallax effect for banner
 var parallax = document.getElementsByClassName('banner')[0];
 window.addEventListener("scroll", function(){
     var pageOffset = window.pageYOffset * 0.7;
-    parallax.style.backgroundPositionY = pageOffset + 'px';
+    if(window.innerWidth > desktopWidth){
+        parallax.style.backgroundPositionY = pageOffset + 'px';
+    }
 })
 
 
@@ -75,4 +80,6 @@ $(document).scroll(function(){
         $('.floating-nav li:eq(1)').css('background-color', '#222222');
         $('.floating-nav li:eq(0)').css('background-color', 'red');
     } 
+
+    console.log('window width: ' + window.innerWidth);
 })

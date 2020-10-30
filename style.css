@@ -68,6 +68,9 @@ a{
     background-color: #222222;
     border-bottom: 1px solid white;
     position: sticky;
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
 }
 
 .hamburger-menu ul{
@@ -81,6 +84,7 @@ a{
     height: 2px;
     margin: 5px;
     width: 20px;
+    justify-content: flex-end;
 }
 
 .banner{
@@ -97,12 +101,11 @@ a{
 
 .floating-nav{
     z-index: 2;
-    right: 75px;
     background: #222222;
     color: white;
     top: 20%;
     position: sticky;
-    width: 150px;
+    width: 125px;
     float: right;
     border: black solid 2px;
     border-radius: 3px;
@@ -131,7 +134,7 @@ a{
     width: 100%;
     background-color: #222222;
     position: absolute;
-    height: 50px;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -401,10 +404,6 @@ section h1{
         flex-basis: 30%;
     }
 
-    .arrow{
-        height: 75px;
-    }
-
     .mobileNav{
         display: none;
     }
@@ -413,4 +412,11 @@ section h1{
         display: block;
     }
 
+}
+
+@media only screen and (min-width: 1400px){
+    .floating-nav{
+        right: 65px;
+        width: 150px;
+    }
 }
